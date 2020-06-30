@@ -11,7 +11,7 @@ class TestSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('test')->insert(
+        DB::table('tests')->insert(
             ['message' => "hello world!"]
         );
     }
