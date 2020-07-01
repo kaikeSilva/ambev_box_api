@@ -9,6 +9,6 @@ class TestController extends Controller
 {
 
     public function index(Request $request) {
-        return Test::all()->pluck('message');
+        return "abcs";
     }
 }

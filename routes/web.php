@@ -18,4 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tests', 'TestController@index');
+Route::prefix('api')->group(function () {
+    Route::get('tests', 'TestController@index');
+
+    //Authentication
+    Route::post('login', 'AuthenticationController@login');
+    Route::post('register', 'AuthenticationController@register');
+    Route::post('logout', 'AuthenticationController@logout');
+});
+
